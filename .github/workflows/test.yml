@@ -3,7 +3,7 @@ name: Build and test
 
 # Trigger, run on push on any branch
 on:
-  pull-request
+  pull_request
 
 jobs:
   test: # The 'build' job
@@ -20,7 +20,7 @@ jobs:
         # print go version
       - run: go version
 
-      # build project
+      # Build project
       - name: Build
         run: go build -v ./...
 
