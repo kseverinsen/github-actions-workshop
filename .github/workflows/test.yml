@@ -10,7 +10,13 @@ jobs:
     name: "Build application"
     runs-on: 'ubuntu-latest'
     steps:
-      # Step to print a simple message
-      - run: echo "Hello world!"
+      - uses: actions/checkout@v4
+      # install go
+      - name: Setup go
+        uses: actions/setup-go@v4
+        with: #variables
+          go-version: "1.21.x"
 
+        # print go version
+      - run: go version
 
