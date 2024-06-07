@@ -20,7 +20,7 @@ jobs:
         # print go version
       - run: go version
 
-      # build project
+      # Build project
       - name: Build
         run: go build -v ./...
 
